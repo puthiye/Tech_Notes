@@ -1,0 +1,14 @@
+lambda should have iam role which allows getObject, list access for that bucket
+
+kms policy should allow lambda iam role to decode kms key
+
+s3 bucket policy should allow lambda iam role
+
+lambda should be within correct vpc
+
+lambda outbound SG should have 443 0.0.0.0/0 - to allow s3 access
+
+vpce policy should have entry for that bucket  (because bucket is private in NDH)
+
+lambda subnet - route table should have pl-XXXXX entry to that vpce
+
